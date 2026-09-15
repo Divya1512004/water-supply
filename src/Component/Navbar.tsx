@@ -1,185 +1,5 @@
 
 
-// import { useState } from "react";
-// import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faBars,
-//   faXmark,
-//   faPhone,
-// } from "@fortawesome/free-solid-svg-icons";
-
-// const Navbar = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   const closeMenu = () => {
-//     setIsOpen(false);
-//   };
-
-//   return (
-//     <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-md">
-//       {/* Navbar Header */}
-//       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-
-//         {/* Logo */}
-  
-// <Link
-//   to="/"
-//   onClick={closeMenu}
-//   className="logo-shine group relative inline-block text-xl font-extrabold tracking-tight sm:text-2xl"
-// >
-//   <span className="text-gray-900">Dhanu</span>
-//   <span className="text-orange-500">Contracts</span>
-
-//   {/* Sharp shining line */}
-//   <span className="logo-shine-line pointer-events-none absolute inset-y-0 left-0" />
-// </Link>
-
-
-//         {/* Desktop Menu */}
-//         <div className="hidden items-center gap-8 md:flex">
-
-//           {/* Home */}
-//           <Link
-//             to="/"
-//             className="group relative font-medium text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
-//           >
-//             Home
-
-//             <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
-//           </Link>
-
-//           {/* Materials */}
-//           <Link
-//             to="/products"
-//             className="group relative font-medium text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
-//           >
-//             Materials
-
-//             <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
-//           </Link>
-
-//           {/* About */}
-//           <Link
-//             to="/about"
-//             className="group relative font-medium text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
-//           >
-//             About
-
-//             <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
-//           </Link>
-
-//           {/* Contact */}
-//           <Link
-//             to="/contact"
-//             className="group relative font-medium text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
-//           >
-//             Contact
-
-//             <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
-//           </Link>
-
-//           {/* Desktop Call Button */}
-//           <a
-//             href="tel:+916385407797"
-//             className="group flex items-center gap-2 rounded-lg bg-orange-500 px-5 py-2.5 font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-lg active:translate-y-0"
-//           >
-//             <FontAwesomeIcon
-//               icon={faPhone}
-//               className="transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
-//             />
-
-//             <span>Call Now</span>
-//           </a>
-//         </div>
-
-//         {/* Mobile Menu Button */}
-//         <button
-//           type="button"
-//           onClick={() => setIsOpen((prev) => !prev)}
-//           className="flex h-10 w-10 items-center justify-center rounded-lg text-xl text-gray-800 transition-all duration-300 hover:bg-orange-50 hover:text-orange-500 active:scale-90 md:hidden"
-//           aria-label={isOpen ? "Close menu" : "Open menu"}
-//           aria-expanded={isOpen}
-//         >
-//           <FontAwesomeIcon
-//             icon={isOpen ? faXmark : faBars}
-//             className="transition-all duration-300"
-//           />
-//         </button>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       <div
-//         className={`overflow-hidden border-t border-gray-200 bg-white shadow-md transition-all duration-500 ease-in-out md:hidden ${
-//           isOpen
-//             ? "max-h-[500px] opacity-100"
-//             : "max-h-0 border-t-0 opacity-0"
-//         }`}
-//       >
-//         <div
-//           className={`px-4 py-4 transition-all duration-500 ${
-//             isOpen ? "translate-y-0" : "-translate-y-4"
-//           }`}
-//         >
-
-//           {/* Home */}
-//           <Link
-//             to="/"
-//             onClick={closeMenu}
-//             className="group flex translate-x-0 items-center rounded-lg px-4 py-3 font-medium text-gray-700 transition-all duration-300 hover:translate-x-2 hover:bg-orange-50 hover:text-orange-500"
-//           >
-//             <span>Home</span>
-//           </Link>
-
-//           {/* Materials */}
-//           <Link
-//             to="/products"
-//             onClick={closeMenu}
-//             className="group flex translate-x-0 items-center rounded-lg px-4 py-3 font-medium text-gray-700 transition-all duration-300 hover:translate-x-2 hover:bg-orange-50 hover:text-orange-500"
-//           >
-//             <span>Materials</span>
-//           </Link>
-
-//           {/* About */}
-//           <Link
-//             to="/about"
-//             onClick={closeMenu}
-//             className="group flex translate-x-0 items-center rounded-lg px-4 py-3 font-medium text-gray-700 transition-all duration-300 hover:translate-x-2 hover:bg-orange-50 hover:text-orange-500"
-//           >
-//             <span>About</span>
-//           </Link>
-
-//           {/* Contact */}
-//           <Link
-//             to="/contact"
-//             onClick={closeMenu}
-//             className="group flex translate-x-0 items-center rounded-lg px-4 py-3 font-medium text-gray-700 transition-all duration-300 hover:translate-x-2 hover:bg-orange-50 hover:text-orange-500"
-//           >
-//             <span>Contact</span>
-//           </Link>
-
-//           {/* Mobile Call Button */}
-//           <a
-//             href="tel:+916385407797"
-//             onClick={closeMenu}
-//             className="group mt-3 flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-5 py-3 font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-lg active:translate-y-0"
-//           >
-//             <FontAwesomeIcon
-//               icon={faPhone}
-//               className="transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
-//             />
-
-//             <span>Call Now</span>
-//           </a>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -202,7 +22,7 @@ const Navbar = () => {
       {/* =========================
           NAVBAR HEADER
       ========================== */}
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-2 py-1 sm:px-6 lg:px-8">
 
         {/* =========================
             LOGO
@@ -210,7 +30,8 @@ const Navbar = () => {
         <Link
           to="/"
           onClick={closeMenu}
-          className="logo-shine relative inline-flex h-[65px] w-[170px] items-center justify-center overflow-hidden rounded-md"
+          // className="logo-shine relative inline-flex h-[65px] w-[170px] items-center justify-center overflow-hidden rounded-md"
+          className="logo-shine relative inline-flex h-[65px] w-[150px] items-center justify-start overflow-hidden rounded-md"
           aria-label="Dhanu Enterprises"
         >
           <img
@@ -245,7 +66,7 @@ const Navbar = () => {
             to="/products"
             className="navbar-link group relative text-lg font-semibold text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
           >
-            Services
+            Materials
 
             <span className="absolute -bottom-2 left-0 h-[3px] w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
           </Link>
@@ -277,7 +98,7 @@ const Navbar = () => {
               DESKTOP CALL BUTTON
           ========================== */}
           <a
-            href="tel:+916385407797"
+            href="tel:+919362292407"
             className="group flex items-center gap-2 rounded-lg bg-orange-500 px-5 py-3 text-base font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-lg active:translate-y-0"
           >
             <FontAwesomeIcon
@@ -366,7 +187,7 @@ const Navbar = () => {
 
           {/* MOBILE CALL BUTTON */}
           <a
-            href="tel:+916385407797"
+            href="tel:+919362292407"
             onClick={closeMenu}
             className="group mt-3 flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-5 py-3 text-base font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-lg active:translate-y-0"
           >

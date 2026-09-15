@@ -45,7 +45,7 @@
 
 //     // Your WhatsApp number
 //     // Country code +91, without + or spaces
-//     const whatsappNumber = "916385407797";
+//     const whatsappNumber = "91+919362292407";
 
 //     // Create WhatsApp message
 //     const whatsappMessage = `
@@ -289,7 +289,7 @@ const QuoteForm = () => {
     event.preventDefault();
 
     // WhatsApp number
-    const whatsappNumber = "916385407797";
+    const whatsappNumber = "+919362292407";
 
     // Create WhatsApp message
     const whatsappMessage = `

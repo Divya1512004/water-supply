@@ -80,16 +80,8 @@ const Hero = () => {
           {/* Buttons */}
           <div className="mt-4 flex flex-wrap gap-3 sm:mt-5">
 
-            {/* <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-orange-500 px-4 py-2 text-sm font-bold text-white shadow-lg transition hover:bg-orange-600 sm:px-5 sm:py-2.5"
-            >
-              {t("hero.enquire")}
-              <FontAwesomeIcon icon={faArrowRight} />
-            </Link> */}
-
             <a
-              href="tel:+916385407797"
+              href="tel:+919362292407"
               className="inline-flex items-center gap-2 rounded-lg bg-orange-500 px-4 py-2 text-sm font-bold text-white shadow-lg transition hover:bg-orange-600 sm:px-5 sm:py-2.5"
             >
               <FontAwesomeIcon icon={faPhone} />
@@ -100,34 +92,6 @@ const Hero = () => {
 
           {/* Service Cards */}
           <div className="mt-5 grid max-w-md grid-cols-2 gap-2 sm:mt-6 sm:gap-3">
-
-            {/* Materials */}
-            {/* <div className="rounded-lg border border-white/25 bg-black/25 p-2.5 shadow-lg backdrop-blur-sm sm:p-3">
-
-              <FontAwesomeIcon
-                icon={faMountain}
-                className="text-base text-orange-400 sm:text-lg"
-              />
-
-              <p className="mt-1 text-xs font-semibold text-white sm:text-sm">
-                {t("hero.materials")}
-              </p>
-
-            </div> */}
-
-            {/* Tank Water */}
-            {/* <div className="rounded-lg border border-white/25 bg-black/25 p-2.5 shadow-lg backdrop-blur-sm sm:p-3">
-
-              <FontAwesomeIcon
-                icon={faDroplet}
-                className="text-base text-orange-400 sm:text-lg"
-              />
-
-              <p className="mt-1 text-xs font-semibold text-white sm:text-sm">
-                {t("hero.tankWater")}
-              </p>
-
-            </div> */}
 
           </div>
 

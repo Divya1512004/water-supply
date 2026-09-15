@@ -139,7 +139,7 @@ const JCBServices = () => {
             </Link>
 
             <a
-              href="tel:+91 6385407797"
+              href="tel:+919362292407"
               className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-6 py-3 font-semibold text-gray-800 transition hover:border-orange-500 hover:text-orange-500"
             >
               <FontAwesomeIcon icon={faPhone} />

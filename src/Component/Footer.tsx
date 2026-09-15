@@ -82,15 +82,15 @@ const Footer = () => {
               />
 
               <a
-                href="tel:+916385407797"
+                href="tel:+919362292407"
                 className="transition hover:text-orange-500"
               >
-                +91 6385407797
+                +91 9362292407
               </a>
             </p>
 
             {/* Location */}
-            <p className="flex gap-3">
+            {/* <p className="flex gap-3">
               <FontAwesomeIcon
                 icon={faLocationDot}
                 className="mt-1 text-orange-500"
@@ -99,7 +99,22 @@ const Footer = () => {
               <span>
                 {t("footer.location")}
               </span>
-            </p>
+            </p> */}
+            <a
+              href="https://maps.app.goo.gl/aLPPpcXrj2egscTMA?g_st=aw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex gap-3 text-gray-400 transition hover:text-orange-500"
+            >
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                className="mt-1 text-orange-500 transition-transform duration-300 group-hover:scale-110"
+              />
+
+              <span>
+                {t("footer.location")}
+              </span>
+            </a>
 
           </div>
         </div>

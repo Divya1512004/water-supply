@@ -257,7 +257,7 @@
 //           </p>
 
 //           <a
-//             href="tel:+916385407797"
+//             href="tel:+91+919362292407"
 //             className="group mx-auto mt-6 inline-flex items-center gap-3 rounded-lg bg-orange-500 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-orange-500/30"
 //           >
 //             <FontAwesomeIcon
@@ -575,7 +575,7 @@ const QA = () => {
           </p>
 
           <a
-            href="tel:+916385407797"
+            href="tel:+919362292407"
             className="group mx-auto mt-6 inline-flex items-center gap-3 rounded-lg bg-orange-500 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-orange-500/30"
           >
             <FontAwesomeIcon

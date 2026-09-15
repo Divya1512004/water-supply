@@ -138,7 +138,7 @@
 
 
 import { useTranslation } from "../i18n";
-import QA from "../pages/QA";
+
 
 const About = () => {
   const { t } = useTranslation();
@@ -281,7 +281,7 @@ const About = () => {
         {/* RIGHT IMAGE */}
         <div className="overflow-hidden rounded-2xl shadow-lg">
           <img
-            src="/public/t.jpg"
+            src="/t.jpg"
             alt={t("about.imageAlt")}
             className="h-[450px] w-full object-cover"
           />
