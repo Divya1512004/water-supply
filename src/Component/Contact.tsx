@@ -108,7 +108,7 @@ import {
   faLocationDot,
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
-
+import QA from "../pages/QA";
 import QuoteForm from "./QuoteForm";
 import { useTranslation } from "../i18n";
 
@@ -224,6 +224,7 @@ const Contact = () => {
 
         </div>
       </div>
+      <QA/>
     </section>
   );
 };

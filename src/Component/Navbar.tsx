@@ -1,4 +1,5 @@
 
+
 // import { useState } from "react";
 // import { Link } from "react-router-dom";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,87 +12,167 @@
 // const Navbar = () => {
 //   const [isOpen, setIsOpen] = useState(false);
 
-//   return (
-//     <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
-//       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        
-//         <Link to="/" className="text-2xl font-extrabold tracking-tight text-gray-900">
-//           Dhanu<span className="text-orange-500">Contracts</span>
-//         </Link>
+//   const closeMenu = () => {
+//     setIsOpen(false);
+//   };
 
+//   return (
+//     <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-md">
+//       {/* Navbar Header */}
+//       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+
+//         {/* Logo */}
+  
+// <Link
+//   to="/"
+//   onClick={closeMenu}
+//   className="logo-shine group relative inline-block text-xl font-extrabold tracking-tight sm:text-2xl"
+// >
+//   <span className="text-gray-900">Dhanu</span>
+//   <span className="text-orange-500">Contracts</span>
+
+//   {/* Sharp shining line */}
+//   <span className="logo-shine-line pointer-events-none absolute inset-y-0 left-0" />
+// </Link>
+
+
+//         {/* Desktop Menu */}
 //         <div className="hidden items-center gap-8 md:flex">
+
+//           {/* Home */}
 //           <Link
 //             to="/"
-//             className="font-medium text-gray-700 transition hover:text-orange-500"
+//             className="group relative font-medium text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
 //           >
 //             Home
+
+//             <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
 //           </Link>
 
+//           {/* Materials */}
 //           <Link
 //             to="/products"
-//             className="font-medium text-gray-700 transition hover:text-orange-500"
+//             className="group relative font-medium text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
 //           >
 //             Materials
+
+//             <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
 //           </Link>
-          
+
+//           {/* About */}
 //           <Link
 //             to="/about"
-//             className="font-medium text-gray-700 transition hover:text-orange-500"
+//             className="group relative font-medium text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
 //           >
 //             About
+
+//             <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
 //           </Link>
 
+//           {/* Contact */}
 //           <Link
 //             to="/contact"
-//             className="font-medium text-gray-700 transition hover:text-orange-500"
+//             className="group relative font-medium text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
 //           >
 //             Contact
+
+//             <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
 //           </Link>
 
+//           {/* Desktop Call Button */}
 //           <a
 //             href="tel:+916385407797"
-//             className="flex items-center gap-2 rounded-lg bg-orange-500 px-5 py-2.5 font-semibold text-white transition hover:bg-orange-600"
+//             className="group flex items-center gap-2 rounded-lg bg-orange-500 px-5 py-2.5 font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-lg active:translate-y-0"
 //           >
-//             <FontAwesomeIcon icon={faPhone} />
-//             Call Now
+//             <FontAwesomeIcon
+//               icon={faPhone}
+//               className="transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
+//             />
+
+//             <span>Call Now</span>
 //           </a>
 //         </div>
 
+//         {/* Mobile Menu Button */}
 //         <button
 //           type="button"
 //           onClick={() => setIsOpen((prev) => !prev)}
-//           className="text-2xl text-gray-800 md:hidden"
-//           aria-label="Toggle menu"
+//           className="flex h-10 w-10 items-center justify-center rounded-lg text-xl text-gray-800 transition-all duration-300 hover:bg-orange-50 hover:text-orange-500 active:scale-90 md:hidden"
+//           aria-label={isOpen ? "Close menu" : "Open menu"}
+//           aria-expanded={isOpen}
 //         >
-//           <FontAwesomeIcon icon={isOpen ? faXmark : faBars} />
+//           <FontAwesomeIcon
+//             icon={isOpen ? faXmark : faBars}
+//             className="transition-all duration-300"
+//           />
 //         </button>
 //       </div>
 
-//       {isOpen && (
-//         <div className="border-t border-gray-200 bg-white px-5 py-5 md:hidden">
-//           <div className="flex flex-col gap-4">
-//             <Link onClick={() => setIsOpen(false)} to="/">
-//               Home
-//             </Link>
+//       {/* Mobile Menu */}
+//       <div
+//         className={`overflow-hidden border-t border-gray-200 bg-white shadow-md transition-all duration-500 ease-in-out md:hidden ${
+//           isOpen
+//             ? "max-h-[500px] opacity-100"
+//             : "max-h-0 border-t-0 opacity-0"
+//         }`}
+//       >
+//         <div
+//           className={`px-4 py-4 transition-all duration-500 ${
+//             isOpen ? "translate-y-0" : "-translate-y-4"
+//           }`}
+//         >
 
-//             <Link onClick={() => setIsOpen(false)} to="/products">
-//               Materials
-//             </Link>
+//           {/* Home */}
+//           <Link
+//             to="/"
+//             onClick={closeMenu}
+//             className="group flex translate-x-0 items-center rounded-lg px-4 py-3 font-medium text-gray-700 transition-all duration-300 hover:translate-x-2 hover:bg-orange-50 hover:text-orange-500"
+//           >
+//             <span>Home</span>
+//           </Link>
 
-//             <Link onClick={() => setIsOpen(false)} to="/services">
-//               JCB Service
-//             </Link>
+//           {/* Materials */}
+//           <Link
+//             to="/products"
+//             onClick={closeMenu}
+//             className="group flex translate-x-0 items-center rounded-lg px-4 py-3 font-medium text-gray-700 transition-all duration-300 hover:translate-x-2 hover:bg-orange-50 hover:text-orange-500"
+//           >
+//             <span>Materials</span>
+//           </Link>
 
-//             <Link onClick={() => setIsOpen(false)} to="/about">
-//               About
-//             </Link>
+//           {/* About */}
+//           <Link
+//             to="/about"
+//             onClick={closeMenu}
+//             className="group flex translate-x-0 items-center rounded-lg px-4 py-3 font-medium text-gray-700 transition-all duration-300 hover:translate-x-2 hover:bg-orange-50 hover:text-orange-500"
+//           >
+//             <span>About</span>
+//           </Link>
 
-//             <Link onClick={() => setIsOpen(false)} to="/contact">
-//               Contact
-//             </Link>
-//           </div>
+//           {/* Contact */}
+//           <Link
+//             to="/contact"
+//             onClick={closeMenu}
+//             className="group flex translate-x-0 items-center rounded-lg px-4 py-3 font-medium text-gray-700 transition-all duration-300 hover:translate-x-2 hover:bg-orange-50 hover:text-orange-500"
+//           >
+//             <span>Contact</span>
+//           </Link>
+
+//           {/* Mobile Call Button */}
+//           <a
+//             href="tel:+916385407797"
+//             onClick={closeMenu}
+//             className="group mt-3 flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-5 py-3 font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-lg active:translate-y-0"
+//           >
+//             <FontAwesomeIcon
+//               icon={faPhone}
+//               className="transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
+//             />
+
+//             <span>Call Now</span>
+//           </a>
 //         </div>
-//       )}
+//       </div>
 //     </nav>
 //   );
 // };
@@ -116,127 +197,192 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
-      {/* Navbar Header */}
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-md">
 
-        {/* Logo */}
+      {/* =========================
+          NAVBAR HEADER
+      ========================== */}
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+
+        {/* =========================
+            LOGO
+        ========================== */}
         <Link
           to="/"
           onClick={closeMenu}
-          className="text-xl font-extrabold tracking-tight text-gray-900 sm:text-2xl"
+          className="logo-shine relative inline-flex h-[65px] w-[170px] items-center justify-center overflow-hidden rounded-md"
+          aria-label="Dhanu Enterprises"
         >
-          Dhanu<span className="text-orange-500">Contracts</span>
+          <img
+            src="/logo.png"
+            alt="Dhanu Enterprises"
+            className="h-full w-full object-contain"
+          />
+
+          {/* Sharp shining line */}
+          <span className="logo-shine-line pointer-events-none absolute inset-y-0 left-0" />
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden items-center gap-8 md:flex">
 
+        {/* =========================
+            DESKTOP MENU
+        ========================== */}
+        <div className="hidden items-center gap-9 md:flex">
+
+          {/* HOME */}
           <Link
             to="/"
-            className="font-medium text-gray-700 transition hover:text-orange-500"
+            className="navbar-link group relative text-lg font-semibold text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
           >
             Home
+
+            <span className="absolute -bottom-2 left-0 h-[3px] w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
           </Link>
 
+
+          {/* MATERIALS */}
           <Link
             to="/products"
-            className="font-medium text-gray-700 transition hover:text-orange-500"
+            className="navbar-link group relative text-lg font-semibold text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
           >
-            Materials
+            Services
+
+            <span className="absolute -bottom-2 left-0 h-[3px] w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
           </Link>
 
+
+          {/* ABOUT */}
           <Link
             to="/about"
-            className="font-medium text-gray-700 transition hover:text-orange-500"
+            className="navbar-link group relative text-lg font-semibold text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
           >
             About
+
+            <span className="absolute -bottom-2 left-0 h-[3px] w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
           </Link>
 
+
+          {/* CONTACT */}
           <Link
             to="/contact"
-            className="font-medium text-gray-700 transition hover:text-orange-500"
+            className="navbar-link group relative text-lg font-semibold text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:text-orange-500"
           >
             Contact
+
+            <span className="absolute -bottom-2 left-0 h-[3px] w-0 rounded-full bg-orange-500 transition-all duration-300 group-hover:w-full" />
           </Link>
 
-          {/* Desktop Call Button */}
+
+          {/* =========================
+              DESKTOP CALL BUTTON
+          ========================== */}
           <a
             href="tel:+916385407797"
-            className="flex items-center gap-2 rounded-lg bg-orange-500 px-5 py-2.5 font-semibold text-white transition hover:bg-orange-600"
+            className="group flex items-center gap-2 rounded-lg bg-orange-500 px-5 py-3 text-base font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-lg active:translate-y-0"
           >
-            <FontAwesomeIcon icon={faPhone} />
-            Call Now
+            <FontAwesomeIcon
+              icon={faPhone}
+              className="transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
+            />
+
+            <span>Call Now</span>
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
+
+        {/* =========================
+            MOBILE MENU BUTTON
+        ========================== */}
         <button
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-xl text-gray-800 transition hover:bg-gray-100 md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-lg text-xl text-gray-800 transition-all duration-300 hover:bg-orange-50 hover:text-orange-500 active:scale-90 md:hidden"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
         >
-          <FontAwesomeIcon icon={isOpen ? faXmark : faBars} />
+          <FontAwesomeIcon
+            icon={isOpen ? faXmark : faBars}
+            className="transition-all duration-300"
+          />
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="border-t border-gray-200 bg-white shadow-md md:hidden">
-          <div className="px-4 py-4">
 
-            {/* Home */}
-            <Link
-              to="/"
-              onClick={closeMenu}
-              className="block rounded-lg px-4 py-3 font-medium text-gray-700 transition hover:bg-orange-50 hover:text-orange-500"
-            >
-              Home
-            </Link>
+      {/* =========================
+          MOBILE MENU
+      ========================== */}
+      <div
+        className={`overflow-hidden border-t border-gray-200 bg-white shadow-md transition-all duration-500 ease-in-out md:hidden ${
+          isOpen
+            ? "max-h-[500px] opacity-100"
+            : "max-h-0 border-t-0 opacity-0"
+        }`}
+      >
+        <div
+          className={`px-4 py-4 transition-all duration-500 ${
+            isOpen ? "translate-y-0" : "-translate-y-4"
+          }`}
+        >
 
-            {/* Materials */}
-            <Link
-              to="/products"
-              onClick={closeMenu}
-              className="block rounded-lg px-4 py-3 font-medium text-gray-700 transition hover:bg-orange-50 hover:text-orange-500"
-            >
-              Materials
-            </Link>
+          {/* HOME */}
+          <Link
+            to="/"
+            onClick={closeMenu}
+            className="group flex items-center rounded-lg px-4 py-3 text-lg font-semibold text-gray-700 transition-all duration-300 hover:translate-x-2 hover:bg-orange-50 hover:text-orange-500"
+          >
+            <span>Home</span>
+          </Link>
 
-            {/* About */}
-            <Link
-              to="/about"
-              onClick={closeMenu}
-              className="block rounded-lg px-4 py-3 font-medium text-gray-700 transition hover:bg-orange-50 hover:text-orange-500"
-            >
-              About
-            </Link>
 
-            {/* Contact */}
-            <Link
-              to="/contact"
-              onClick={closeMenu}
-              className="block rounded-lg px-4 py-3 font-medium text-gray-700 transition hover:bg-orange-50 hover:text-orange-500"
-            >
-              Contact
-            </Link>
+          {/* MATERIALS */}
+          <Link
+            to="/products"
+            onClick={closeMenu}
+            className="group flex items-center rounded-lg px-4 py-3 text-lg font-semibold text-gray-700 transition-all duration-300 hover:translate-x-2 hover:bg-orange-50 hover:text-orange-500"
+          >
+            <span>Materials</span>
+          </Link>
 
-            {/* Mobile Call Button */}
-            <a
-              href="tel:+916385407797"
-              onClick={closeMenu}
-              className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-5 py-3 font-semibold text-white transition hover:bg-orange-600"
-            >
-              <FontAwesomeIcon icon={faPhone} />
-              Call Now
-            </a>
-          </div>
+
+          {/* ABOUT */}
+          <Link
+            to="/about"
+            onClick={closeMenu}
+            className="group flex items-center rounded-lg px-4 py-3 text-lg font-semibold text-gray-700 transition-all duration-300 hover:translate-x-2 hover:bg-orange-50 hover:text-orange-500"
+          >
+            <span>About</span>
+          </Link>
+
+
+          {/* CONTACT */}
+          <Link
+            to="/contact"
+            onClick={closeMenu}
+            className="group flex items-center rounded-lg px-4 py-3 text-lg font-semibold text-gray-700 transition-all duration-300 hover:translate-x-2 hover:bg-orange-50 hover:text-orange-500"
+          >
+            <span>Contact</span>
+          </Link>
+
+
+          {/* MOBILE CALL BUTTON */}
+          <a
+            href="tel:+916385407797"
+            onClick={closeMenu}
+            className="group mt-3 flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-5 py-3 text-base font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-lg active:translate-y-0"
+          >
+            <FontAwesomeIcon
+              icon={faPhone}
+              className="transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
+            />
+
+            <span>Call Now</span>
+          </a>
+
         </div>
-      )}
+      </div>
     </nav>
   );
 };
 
 export default Navbar;
+

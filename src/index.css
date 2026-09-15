@@ -9,3 +9,61 @@ body {
   min-width: 320px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* =========================================
+   DhanuContracts - Sharp Shine Effect
+   ========================================= */
+
+.logo-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sharp bright reflection line */
+.logo-shine-line {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -20px;
+
+  width: 3px;
+
+  background: #ffffff;
+
+  transform: skewX(-15deg);
+
+  opacity: 0;
+
+  box-shadow:
+    0 0 4px #ffffff,
+    0 0 8px #ffffff,
+    0 0 12px rgba(255, 255, 255, 0.9);
+
+  animation: logoShine 4s ease-in-out infinite;
+}
+
+/* Slow sharp movement */
+@keyframes logoShine {
+  0% {
+    left: -20px;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  60% {
+    left: 110%;
+    opacity: 0;
+  }
+
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}

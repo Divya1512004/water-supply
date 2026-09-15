@@ -9,6 +9,7 @@ import {
 
 import ProductCard, { Product } from "./ProductCard";
 import { useTranslation } from "../i18n";
+import ContractDurationDetails from "../pages/ContractDuration";
 
 const products: Product[] = [
   {
@@ -93,6 +94,8 @@ const Products = () => {
             />
           ))}
         </div>
+        {/* Contract Duration Details */}
+          <ContractDurationDetails />
 
       </div>
     </section>
